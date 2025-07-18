@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>LDP FLY EFB For HarmonyOS NEXT - 隐私政策</title>
+    <!-- 字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- 图标字体 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a3b6d;
+            --accent-color: #1a73e8;
+            --bg-light: #f9f9f9;
+            --text-dark: #333;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #e0ecff, #f9f9f9);
+            color: var(--text-dark);
+            transition: background 0.3s, color 0.3s;
+        }
+
+        /* 新增：Logo 区域 */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px 20px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .logo-container img {
+            height: 60px;
+        }
+
+        .logo-container i.fas {
+            font-size: 40px;
+            color: var(--primary-color);
+        }
+
+        .logo-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        header i {
+            color: var(--primary-color);
+            font-size: 24px;
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        p, li {
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            position: relative;
+        }
+
+        a::after {
+            content: " ➔";
+            font-size: 0.8em;
+            opacity: 0.6;
+        }
+
+        hr {
+            margin: 40px 0;
+            border: 0;
+            border-top: 1px solid #ddd;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .lang-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .lang-section > div {
+            padding: 20px;
+            border-radius: 10px;
+            background: #f5f7fa;
+        }
+
+        footer {
+            text-align: center;
+            margin: 40px 0;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1000;
+        }
+
+        /* 深色模式 */
+        body.dark-mode {
+            background: #121212;
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .container,
+        body.dark-mode .lang-section > div,
+        body.dark-mode .logo-container {
+            background: #1e1e1e;
+            color: #f0f0f0;
+        }
+
+        body.dark-mode a {
+            color: #6ebaff;
+        }
+
+        body.dark-mode hr {
+            border-top: 1px solid #444;
+        }
+
+        @media (max-width: 900px) {
+            .lang-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p, li {
+                font-size: 15px;
+            }
+
+            .logo-title {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Logo 区域 -->
+<div class="logo-container">
+    <!-- 方式一：使用图标 -->
+    <!-- <i class="fas fa-plane-departure"></i> -->
+    
+    <!-- 方式二：使用图片 -->
+     <img src="logo.png" alt="LDP FLY EFB Logo">
+
+    <div class="logo-title">LDP FLY EFB For HarmonyOS NEXT</div>
+</div>
+
+<!-- 深色模式按钮 -->
+<button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 切换深色模式</button>
+
+<!-- 页面主体内容 -->
+<div class="container">
+    <header>
+        <i class="fas fa-shield-alt"></i>
+        <h1>隐私政策</h1>
+    </header>
+    <p>最后更新日期：2025年5月13日</p>
+
+    <div class="lang-section">
+        <div>
+            <h2>介绍</h2>
+            <p><code>LDP FLY EFB For HarmonyOS NEXT</code> 是一款专为提升模拟飞行飞行操作效率而设计的电子飞行包（EFB）应用程序。我们致力于保护用户的隐私和数据安全。本隐私政策详细说明了我们如何处理您的信息。</p>
+
+            <h2>运行环境及设备说明</h2>
+            <p><strong>本应用仅支持运行在搭载 HarmonyOS NEXT / HarmonyOS 5及以上的设备上。</strong>我们建议您在兼容的操作系统版本上使用本应用以获得最佳体验。</p>
+
+            <h2>数据收集与使用</h2>
+            <ul>
+                <li><strong>个人信息</strong>：我们不会以任何方式收集或存储您的个人身份信息。</li>
+                <li><strong>设备信息</strong>：为了提供更好的服务，我们可能会收集设备型号、操作系统版本等非个人信息。</li>
+                <li><strong>使用数据</strong>：我们不会记录您在应用内的具体操作行为。</li>
+            </ul>
+
+            <h2>第三方服务</h2>
+            <p>我们的应用不包含任何第三方广告或跟踪服务，确保您的使用体验纯净无干扰。</p>
+
+            <h2>安全措施</h2>
+            <p>尽管我们不收集敏感信息，但我们仍然采取合理的技术和组织措施来保护已知的信息免受未经授权的访问、更改、泄露或破坏。</p>
+
+            <h2>用户权利</h2>
+            <p>您可以随时卸载应用来移除我们的服务。如果您有任何疑问或需要进一步的帮助，请通过以下邮箱联系我们：<a href="mailto:1510006135@qq.com">1510006135@qq.com</a>。</p>
+
+            <h2>联系我们</h2>
+            <p>如有任何关于隐私政策的问题，请发送邮件至：<a href="mailto:1510006135@qq.com">1510006135@qq.com</a>。</p>
+        </div>
+
+        <div>
+            <h2>Introduction</h2>
+            <p><code>LDP FLY EFB For HarmonyOS NEXT</code> is an Electronic Flight Bag (EFB) application designed to enhance flight operation efficiency. We are committed to protecting your privacy and data security. This privacy policy outlines how we handle your information.</p>
+
+            <h2>Operating Environment and Device Requirements</h2>
+            <p><strong>This application only runs on devices equipped with HarmonyOS NEXT / HarmonyOS 5.</strong> We recommend using this app on compatible operating system versions for the best experience.</p>
+
+            <h2>Data Collection and Usage</h2>
+            <ul>
+                <li><strong>Personal Information</strong>: We do not collect or store any personal identity information.</li>
+                <li><strong>Device Information</strong>: To provide better service, we may collect non-personal information such as device model and operating system version.</li>
+                <li><strong>Usage Data</strong>: We do not record specific operational behaviors within the application.</li>
+            </ul>
+
+            <h2>Third-party Services</h2>
+            <p>Our application does not include any third-party advertising or tracking services, ensuring a clean and uninterrupted user experience.</p>
+
+            <h2>Security Measures</h2>
+            <p>Although we do not collect sensitive information, we still take reasonable technical and organizational measures to protect known information from unauthorized access, modification, disclosure, or destruction.</p>
+
+            <h2>User Rights</h2>
+            <p>You can uninstall the application at any time to remove our services. If you have any questions or need further assistance, please contact us via the following email: <a href="mailto:1510006135@qq.com">1510006135@qq.com</a>.</p>
+
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this privacy policy, please send an email to: <a href="mailto:1510006135@qq.com">1510006135@qq.com</a>.</p>
+        </div>
+    </div>
+
+    <hr/>
+
+    <footer>
+        &copy; 2025 LDP FLY EFB For HarmonyOS NEXT. All rights reserved.
+    </footer>
+</div>
+
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+    }
+</script>
+</body>
+</html>
